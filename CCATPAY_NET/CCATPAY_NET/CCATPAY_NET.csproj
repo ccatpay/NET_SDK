@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B494A6F-594D-484C-842E-F51E056A2831}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CCATPAY_NET</RootNamespace>
+    <AssemblyName>CCATPAY_NET</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="PaymentLibary\Enumeration\ServiceType.cs" />
+    <Compile Include="PaymentLibary\Models\ReturnData\ReturnBasic.cs" />
+    <Compile Include="PaymentLibary\Models\Shared\HttpClientModel.cs" />
+    <Compile Include="PaymentLibary\Models\UpdateAtm\UpdateAtmModel.cs" />
+    <Compile Include="PaymentLibary\Models\UpdateSms\UpdateSmsModel.cs" />
+    <Compile Include="PaymentLibary\Models\UpdateIbon\UpdateIbonModel.cs" />
+    <Compile Include="PaymentLibary\Process\SecurityProcess.cs" />
+    <Compile Include="SDK\AllCreateOrder.cs" />
+    <Compile Include="SDK\AllOrderQuery.cs" />
+    <Compile Include="SDK\MobilePayment.cs" />
+    <Compile Include="SDK\CreditCard.cs" />
+    <Compile Include="SDK\Token.cs" />
+    <Compile Include="SDK\UpdateCvsAtm.cs" />
+    <Compile Include="SDK\UpdateCvsIbon.cs" />
+    <Compile Include="SDK\UpdateSmsName.cs" />
+    <Compile Include="PaymentLibary\Enumeration\VehicleType.cs" />
+    <Compile Include="PaymentLibary\Enumeration\AcquirerType.cs" />
+    <Compile Include="PaymentLibary\Enumeration\PaymentType.cs" />
+    <Compile Include="PaymentLibary\Enumeration\HttpMethod.cs" />
+    <Compile Include="PaymentLibary\Models\CreateOrder\CocsOrder\CocsOrderModel .cs" />
+    <Compile Include="PaymentLibary\Models\CreateOrder\CocsOrder\CocsInvoiceModel.cs" />
+    <Compile Include="PaymentLibary\Models\CreateOrder\CvsOrder\CvsOrderModel .cs" />
+    <Compile Include="PaymentLibary\Models\CreateOrder\CvsOrder\CvsInvoiceModel.cs" />
+    <Compile Include="PaymentLibary\Models\CreateOrder\DphOrder\DphInvoiceModel.cs" />
+    <Compile Include="PaymentLibary\Models\CreateOrder\DphOrder\DphOrderModel .cs" />
+    <Compile Include="PaymentLibary\Models\OrderQuery\OrderQuery.cs" />
+    <Compile Include="PaymentLibary\Models\ReturnData\ReturnOrderList.cs" />
+    <Compile Include="PaymentLibary\Models\Shared\InvoiceModel.cs" />
+    <Compile Include="PaymentLibary\Models\Shared\OrderModel.cs" />
+    <Compile Include="PaymentLibary\Models\Shared\TokenModel.cs" />
+    <Compile Include="PaymentLibary\Models\ReturnData\ReturnOrder.cs" />
+    <Compile Include="PaymentLibary\Models\ReturnData\ReturnToken.cs" />
+    <Compile Include="PaymentLibary\Process\EnumExtension.cs" />
+    <Compile Include="PaymentLibary\Process\UtilityProcess.cs" />
+    <Compile Include="PaymentLibary\Process\ServerValidator.cs" />
+    <Compile Include="PaymentLibary\Process\InitializeProcess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
