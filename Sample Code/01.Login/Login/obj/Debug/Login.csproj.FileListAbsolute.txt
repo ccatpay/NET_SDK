@@ -1,0 +1,13 @@
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\Login.dll.config
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\Login.dll
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\Login.pdb
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\CCatPay_Net.dll
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\Newtonsoft.Json.dll
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\CCatPay_Net.pdb
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\CCatPay_Net.dll.config
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\bin\Newtonsoft.Json.xml
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\obj\Debug\Login.csproj.AssemblyReference.cache
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\obj\Debug\Login.dll
+C:\Users\ryanlee\Source\Repos\CCATPAY_NET\Sample Code\01.Login\Login\obj\Debug\Login.pdb
