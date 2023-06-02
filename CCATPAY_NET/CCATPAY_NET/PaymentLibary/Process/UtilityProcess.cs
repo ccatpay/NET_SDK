@@ -156,54 +156,36 @@ namespace CCatPay_Net
         /// <returns></returns>
         public V SetErrorList<V>(ref List<string> errList)
         {
+            string status = "OK";
+            string message = string.Empty;
+
+            if (errList.Count > 0)
+            {
+                status = "ERROR";
+                message = String.Join(", ", errList);
+            }
+
             if (typeof(V) == typeof(ReturnBasic))
             {
                 ReturnBasic returnBasic = new ReturnBasic();
-
-                if (errList.Count > 0)
-                {
-                    returnBasic.Status = "ERROR";
-                    returnBasic.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnBasic.Status = "OK";
-                    returnBasic.Message = string.Empty;
-                }
+                returnBasic.Status = status;
+                returnBasic.Message = message;
 
                 return (V)Convert.ChangeType(returnBasic, typeof(V));
             }
             else if (typeof(V) == typeof(ReturnOrder))
             {
                 ReturnOrder returnOrder = new ReturnOrder();
-
-                if (errList.Count > 0)
-                {
-                    returnOrder.Status = "ERROR";
-                    returnOrder.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnOrder.Status = "OK";
-                    returnOrder.Message = string.Empty;
-                }
+                returnOrder.Status = status;
+                returnOrder.Message = message;
 
                 return (V)Convert.ChangeType(returnOrder, typeof(V));
             }
             else if (typeof(V) == typeof(ReturnCvsOrder))
             {
                 ReturnCvsOrder returnCvsOrder = new ReturnCvsOrder();
-
-                if (errList.Count > 0)
-                {
-                    returnCvsOrder.Status = "ERROR";
-                    returnCvsOrder.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnCvsOrder.Status = "OK";
-                    returnCvsOrder.Message = string.Empty;
-                }
+                returnCvsOrder.Status = status;
+                returnCvsOrder.Message = message;
 
                 return (V)Convert.ChangeType(returnCvsOrder, typeof(V));
 
@@ -211,52 +193,24 @@ namespace CCatPay_Net
             else if (typeof(V) == typeof(ReturnCocsOrder))
             {
                 ReturnCocsOrder returnCocsOrder = new ReturnCocsOrder();
-
-                if (errList.Count > 0)
-                {
-                    returnCocsOrder.Status = "ERROR";
-                    returnCocsOrder.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnCocsOrder.Status = "OK";
-                    returnCocsOrder.Message = string.Empty;
-                }
+                returnCocsOrder.Status = status;
+                returnCocsOrder.Message = message;
 
                 return (V)Convert.ChangeType(returnCocsOrder, typeof(V));
             }
             else if (typeof(V) == typeof(ReturnDphOrder))
             {
                 ReturnDphOrder returnDphOrder = new ReturnDphOrder();
-
-                if (errList.Count > 0)
-                {
-                    returnDphOrder.Status = "ERROR";
-                    returnDphOrder.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnDphOrder.Status = "OK";
-                    returnDphOrder.Message = string.Empty;
-                }
+                returnDphOrder.Status = status;
+                returnDphOrder.Message = message;
 
                 return (V)Convert.ChangeType(returnDphOrder, typeof(V));
             }
             else if (typeof(V) == typeof(ReturnCvsOrderList))
             {
                 ReturnCvsOrderList returnCvsOrder = new ReturnCvsOrderList();
-
-                if (errList.Count > 0)
-                {
-                    returnCvsOrder.Status = "ERROR";
-                    returnCvsOrder.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnCvsOrder.Status = "OK";
-                    returnCvsOrder.Message = "Count:0";
-                }
-
+                returnCvsOrder.Status = status;
+                returnCvsOrder.Message = message;
                 returnCvsOrder.OrderList = new List<ReturnCvsOrder>();
 
                 return (V)typeof(V).GetProperty("OrderList").GetValue(returnCvsOrder);
@@ -265,18 +219,8 @@ namespace CCatPay_Net
             else if (typeof(V) == typeof(ReturnCocsOrderList))
             {
                 ReturnCocsOrderList returnCocsOrder = new ReturnCocsOrderList();
-
-                if (errList.Count > 0)
-                {
-                    returnCocsOrder.Status = "ERROR";
-                    returnCocsOrder.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnCocsOrder.Status = "OK";
-                    returnCocsOrder.Message = "Count:0";
-                }
-
+                returnCocsOrder.Status = status;
+                returnCocsOrder.Message = message;
                 returnCocsOrder.OrderList = new List<ReturnCocsOrder>();
 
                 return (V)typeof(V).GetProperty("OrderList").GetValue(returnCocsOrder);
@@ -284,18 +228,8 @@ namespace CCatPay_Net
             else
             {
                 ReturnDphOrderList returnDphOrder = new ReturnDphOrderList();
-
-                if (errList.Count > 0)
-                {
-                    returnDphOrder.Status = "ERROR";
-                    returnDphOrder.Message = String.Join(", ", errList);
-                }
-                else
-                {
-                    returnDphOrder.Status = "OK";
-                    returnDphOrder.Message = "Count:0";
-                }
-
+                returnDphOrder.Status = status;
+                returnDphOrder.Message = message;
                 returnDphOrder.OrderList = new List<ReturnDphOrder>();
 
                 return (V)typeof(V).GetProperty("OrderList").GetValue(returnDphOrder);
