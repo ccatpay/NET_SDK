@@ -43,7 +43,7 @@ namespace CCatPay_Net
                                  {
                                      cmd = order.Command
                                      , cust_id = order.CustomerId
-                                     , customer_order_no = order.CustomerOrderNo
+                                     , cust_order_no = order.CustomerOrderNo
                                      , order_amount = order.OrderAmount
                                      , acquirer_type = order.AcquirerType
                                      , send_time = order.SendTime
@@ -111,7 +111,7 @@ namespace CCatPay_Net
                                 {
                                     cmd = order.Command
                                     , cust_id = order.CustomerId
-                                    , customer_order_no = order.CustomerOrderNo
+                                    , cust_order_no = order.CustomerOrderNo
                                     , order_amount = order.OrderAmount
                                     , refund_amount = order.RefundAmount
                                     , acquirer_type = order.AcquirerType
@@ -180,7 +180,7 @@ namespace CCatPay_Net
                                  {
                                      cmd = order.Command
                                      , cust_id = order.CustomerId
-                                     , customer_order_no = order.CustomerOrderNo
+                                     , cust_order_no = order.CustomerOrderNo
                                      , order_amount = order.OrderAmount
                                      , cr_amount = order.CrAmount
                                      , acquirer_type = order.AcquirerType

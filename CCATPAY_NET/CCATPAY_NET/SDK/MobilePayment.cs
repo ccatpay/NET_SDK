@@ -42,7 +42,7 @@ namespace CCatPay_Net
                     jsonString = JsonConvert.SerializeObject(new
                                  {
                                      cmd = order.Command
-                                     , customer_order_no = order.CustomerOrderNo
+                                     , cust_order_no = order.CustomerOrderNo
                                      , order_amount = order.OrderAmount
                                      , acquirer_type = order.AcquirerType
                                      , send_time = order.SendTime
@@ -85,7 +85,7 @@ namespace CCatPay_Net
                     jsonString = JsonConvert.SerializeObject(new
                                  {
                                      cmd = order.Command
-                                     , customer_order_no = order.CustomerOrderNo
+                                     , cust_order_no = order.CustomerOrderNo
                                      , order_amount = order.OrderAmount
                                      , acquirer_type = order.AcquirerType
                                      , send_time = (order.SendTime.HasValue)
@@ -130,7 +130,7 @@ namespace CCatPay_Net
                     jsonString = JsonConvert.SerializeObject(new
                                  {
                                      cmd = order.Command
-                                     , customer_order_no = order.CustomerOrderNo
+                                     , cust_order_no = order.CustomerOrderNo
                                      , order_amount = order.OrderAmount
                                      , cr_amount = order.CrAmount
                                      , send_time = order.SendTime
