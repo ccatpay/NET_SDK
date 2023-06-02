@@ -91,28 +91,36 @@ namespace CCatPay_Net
                         {
                             var value = typeof(T).GetProperty("OrderList").GetValue(orderList);
 
+                            string status = "OK";
+                            string msg = string.Empty;
+
+                            if (errList.Count > 0) {
+                                status = "ERROR";
+                                msg = String.Join(", ", errList);
+                            }
+
                             if (value.GetType() == typeof(List<ReturnCvsOrder>))
                             {
                                 foreach (var item in (List<ReturnCvsOrder>)value)
                                 {
-                                    item.Status = "ERROR";
-                                    item.Message = String.Join(", ", errList);
+                                    item.Status = status;
+                                    item.Message = msg;
                                 }
                             }
                             else if (value.GetType() == typeof(List<ReturnCocsOrder>))
                             {
                                 foreach (var item in (List<ReturnCocsOrder>)value)
                                 {
-                                    item.Status = "ERROR";
-                                    item.Message = String.Join(", ", errList);
+                                    item.Status = status;
+                                    item.Message = msg;
                                 }
                             }
                             else if (value.GetType() == typeof(List<ReturnDphOrder>))
                             {
                                 foreach (var item in (List<ReturnDphOrder>)value)
                                 {
-                                    item.Status = "ERROR";
-                                    item.Message = String.Join(", ", errList);
+                                    item.Status = status;
+                                    item.Message = msg;
                                 }
                             }
                         }
